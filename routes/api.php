@@ -16,3 +16,19 @@ use Illuminate\Http\Request;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+
+use App\Domains\Perosn\Http\Controllers\Api\Perosn\PerosnController;
+
+Route::group([
+    'prefix' => 'perosn',
+    'as' => 'perosn.',
+], function () {
+
+    Route::get('/', [PerosnController::class, 'index'])->name('index');
+    Route::post('/', [PerosnController::class, 'store'])->name('store');
+    Route::group(['prefix' => '{project}'], function () {
+        Route::get('/', [PerosnController::class, 'show'])->name('show');
+        Route::put('/', [PerosnController::class, 'update'])->name('update');
+        Route::delete('/', [PerosnController::class, 'delete'])->name('destroy');
+    });
+});
