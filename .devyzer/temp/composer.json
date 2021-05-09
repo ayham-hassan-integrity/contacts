@@ -11,6 +11,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "arcanedev/log-viewer": "8.x",
+        "darkaonline/l5-swagger": "^8.0",
         "darkghosthunter/laraguard": "dev-master",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -40,7 +41,8 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "doctrine/annotations": "1.11.*"
     },
     "config": {
         "optimize-autoloader": true,

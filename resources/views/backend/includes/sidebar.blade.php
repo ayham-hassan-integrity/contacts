@@ -27,6 +27,15 @@
                 :text="__('Perosn')" />
         </li>
 
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.perosn.index')"
+                :active="activeClass(Route::is('admin.perosn.index'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-speedometer"
+                :text="__('Perosn')" />
+        </li>
+
         @if (
             $logged_in_user->hasAllAccess() ||
             (
